@@ -1,14 +1,16 @@
 # About
-Convert 
-Utf8 to Utf8 Binary (Raw utf8 binary in memory), 
-Utf8 to Ansi Binary (Char Binary),
-Utf8 to Unicode Binary, 
-Utf8 to Unicode Str, (ASP Backdoor Decrypt)
-Utf8 to Ucs2, 
-Ucs2 to Utf8, 
-Unicode Str to Utf8, (ASP Backdoor Encrypt)
-Unicode Binary to Ansi Binary (Char Binary), 
-Unicode Binary to Str
+Convert in pure javascript 
+ - Utf8 to Utf8 Binary (Raw utf8 binary in memory), 
+ - Utf8 to Ansi Binary (Char Binary),
+ - Utf8 to Unicode Binary, 
+ - Utf8 to Unicode Str (ASP Backdoor Decrypt), 
+ - Utf8 to Ucs2, 
+ - Ucs2 to Utf8, 
+ - Unicode Str to Utf8 (ASP Backdoor Encrypt), 
+ - Unicode Binary to Ansi Binary (Char Binary), 
+ - Unicode Binary to Str
+
+
 
 # Example
 ```javascript
