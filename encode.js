@@ -218,6 +218,18 @@ export function Utf8StrToUtf8Binary (str) {
 }
 
 /**
+ * utf8在内存中的原始字节集 -> 字符串
+ *  [101, 120] (["65", "78"]) -> ex
+ *  [228, 184, 165] (0xe4b8a5]) -> 严
+ * @param {array}  arr
+ * @returns str
+ * @constructor
+ */
+export function Utf8BinaryToUtf8Str (arr) {
+  return BinaryToStr(arr)
+}
+
+/**
  * === Utf8StrToUtf8Binary
  * @param str
  * @returns {Array}
@@ -276,7 +288,7 @@ export function Utf8StrToCharBinary (strUtf8) {
 
 /**
  * 浏览器编码: utf8, 所以传入的str是utf8
- * 风 -> ["e9", "a3", "8e"]
+ * 严 -> [0xe4, 0xb8, 0xa5]
  * @param str
  * @returns {array}
  * @constructor
@@ -284,6 +296,18 @@ export function Utf8StrToCharBinary (strUtf8) {
 export function StrToBinary (str) {
   const encoder = new TextEncoder()
   return Array.from(encoder.encode(str))
+}
+
+/**
+ * 浏览器编码: utf8, 所以传入的str是utf8
+ *  [0xe4, 0xb8, 0xa5] -> 严
+ * @param {array} arr
+ * @returns str
+ * @constructor
+ */
+export function BinaryToStr (arr) {
+  const decoder = new TextDecoder()
+  return decoder.decode(Uint8Array.from([0xe4, 0xb8, 0xa5]).buffer)
 }
 
 /**
